@@ -3,10 +3,11 @@
 Console.Write ("Imput a number:  ");
 n = Convert.ToInt32(Console.ReadLine());
 
-current = 1;
+current = 2;
 
-while (current <=n||current%2==0)
+while (current <=n)
 {
     Console.Write (current+ " ");
-    current ++;  
+    current = current + 2;  
 }
+
