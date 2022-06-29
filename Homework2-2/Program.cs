@@ -18,24 +18,20 @@ int number = ThirdNumber();
 Console.WriteLine(number);
 */
 
-int ThirdNumber()
+void ThirdNumber()
 {
-
     Console.Write ("Введите число:  ");
     int num = Convert.ToInt32(Console.ReadLine());
 
     if (num > 99)
     {
-        int third == num [3];
-
-    }
-    
-    Console.Write ("Третья цифра:  ");
-    return third;
-    
+        int third == num[2];
+        Console.Write ("Третья цифра:  " + third);
+    } 
     else
     {
         Console.Write ("Третьей цифры нет");
     }
 }
 
+ThirdNumber();
