@@ -2,22 +2,6 @@
 //заданного числа или сообщает, что третьей цифры нет.
 
 
-
-/*int ThirdNumber()
-{
-
-    Console.Write ("Введите число:  ");
-    int num = Convert.ToInt32(Console.ReadLine());
-
-    int third = num[2];
-    return third;
-    
-}
-
-int number = ThirdNumber();
-Console.WriteLine(number);
-*/
-
 void ThirdNumber()
 {
     Console.Write ("Введите число:  ");
