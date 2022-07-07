@@ -1,57 +1,23 @@
 ﻿// Напишите программу, которая принимает на вход число 
 //и выдаёт сумму цифр в числе.
 
-int Numbers(int a) // принимает число и выдает кол-во цифр в числе
+void SumKol(int[] array) 
 {
-    int i = 0;
-    if(i <= a)
+    int count = array.Length;
+    int summ = 0;
+
+     for (int i = 0; i < count; i++)
     {
-        while(a>0)
-        {
-            a=a/10;
-            i= i+1;
-        }
+        summ = summ + array[i];
     }
-    return i;
-}
-
-Console.WriteLine("ВВедите число: ");
-int n = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine(Numbers(n));
-*/
-
-
-
-
-
-
-
-int FindSum(int a) // принимает число, выдает сумму чисел от 1 до А.
-{
-    int sum = 0;
-
-    for (int current = 1; current <= a; current++)
-        sum += current; // sum = sum + current
     
-    return sum;
+    Console.Write($"Сумма цифр числа {summ}");
 }
-
+   
 Console.WriteLine("ВВедите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+int arr = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Сумма номеров от 1 до {num} есть {FindSum(num)}");
-
-
-
-
-
-
-
-
-
-
-
+SumKol(arr);
 
 
 
