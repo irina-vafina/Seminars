@@ -118,6 +118,20 @@ int FindEven(int[] array)
     return count;
 }
 
+// Метод, находящий максимальное число в массиве
+
+int FindMax(int[] array) 
+{   
+    int size = array.Length;
+    int i = 0;
+    int nummax = array [0];
+        while(i<size)
+        if(array[i] > nummax)
+            nummax = array[i];
+        i++;
+    return nummax;
+}
+
 //ДЗ Задача 34: Задайте массив заполненный случайными положительными
 // трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 //[345, 897, 568, 234] -> 2
@@ -153,10 +167,27 @@ Console.WriteLine("Sum of elements in odd positions " + sumOdd);
 //Задача 38: Задайте массив вещественных чисел. 
 //Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
+/*
+double[] Array = {12,5};
+double numberMax = 12;
+double numberMin = 5;
+Console.WriteLine(numberMax - numberMin);
+*/
 
+// Найти максимальное число в произвольном массиве.
 
-// не решила
+/*Console.Write("Intut size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Intut min possidle vaiue of elements: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Intut max possidle vaiue of elements: ");
+int max = Convert.ToInt32(Console.ReadLine());
 
+int[] arr = CreateRandomArray(size, min, max);
+ShowArray(arr);
+int MaxNum = FindMax(arr);
+Console.WriteLine("Максимальное число массива =  " + MaxNum);
+*/
 
 
 // вызываем массив из случайных элементов
