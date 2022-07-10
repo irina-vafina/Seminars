@@ -12,6 +12,7 @@ int [] CreateRandomArray (int size, int minValue, int maxValue) // в скобк
     return newArray;
 }
 
+
 // Метод, создающий массив из целочисленных элементов вызванных случайным образом
 // элементы массива положительные, трехзначные.
 
@@ -25,6 +26,7 @@ int [] CreateThreeRandomArray (int size)
     }
     return newArray;
 }
+
 
 // Метод, создающий массив из целочисленных элементов
 // заполненный данными пользователя
@@ -43,6 +45,36 @@ int [] CreateArray (int size)
     return newArray;
 }
 
+
+// Метод, создающий массив из вещественных элементов заполненный данными пользователя
+
+double [] CreateArrayDouble (int size) 
+{
+    double[] newArray = new double [size]; 
+
+    Console.WriteLine("Creating array here: ");     
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Input {i + 1} element: "); 
+        newArray[i] = Convert.ToInt32(Console.ReadLine());        
+    }
+    Console.WriteLine();      
+    return newArray;
+}
+
+// Метод, показывающий, выводящий массив из вещественных элементов на экран, печатающий его. 
+
+void ShowArrayDouble(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");         
+    }
+    Console.WriteLine( );
+}
+ 
+
+
 // Метод, показывающий, выводящий массив на экран, печатающий его.
 // ничего не должен возвращать, только распечатать, поэтому void
 
@@ -55,6 +87,7 @@ void ShowArray(int[] array)
     Console.WriteLine( );
 }
  
+
 // Метод, находящий сумму положительных элементов массива.
 
 int FindPositiveSum(int[] array)
@@ -67,6 +100,7 @@ int FindPositiveSum(int[] array)
     }
     return sum;
 }
+
 
 // Метод, находящий сумму элементов, стоящих на нечетных позициях (индексы)
 
@@ -81,6 +115,7 @@ int FindOddSum(int[] array)
     return sum;
 }
 
+
 // Метод, заменяющий знак элемента массива на противоположный
 
 int[] ReversArray(int[] newArray) // название и нов массив
@@ -91,6 +126,7 @@ int[] ReversArray(int[] newArray) // название и нов массив
     }
     return newArray;
 }
+
 
 // Метод, находящий кол-во элементов массива находящихся в отрезке [10, 99]
 
@@ -105,6 +141,7 @@ int FindTwoDigits(int[] array)
     return count;
 }
 
+
 // Метод, находящий кол-во четных элементов массива
 
 int FindEven(int[] array)
@@ -118,18 +155,97 @@ int FindEven(int[] array)
     return count;
 }
 
+
+// Метод, находящий индекс минимального числа в массиве
+
+void minPosition(int[] array)
+{
+    int minPos = 0;
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i]<array[minPos]) minPos=i;
+    }
+    Console.WriteLine (minPos);
+}
+
+
+// Метод, находящий минимальное число в массиве
+
+void minPosNum(int[] array)
+{
+    int minPos = array[0];
+    
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i]<minPos) minPos=array[i];
+    }
+    Console.WriteLine ("Min =  " + minPos);
+}
+
+
 // Метод, находящий максимальное число в массиве
 
-int FindMax(int[] array) 
-{   
-    int size = array.Length;
-    int i = 0;
-    int nummax = array [0];
-        while(i<size)
-        if(array[i] > nummax)
-            nummax = array[i];
-        i++;
-    return nummax;
+void maxPosNum(int[] array)
+{
+    int maxPos = array[0];
+    
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i]>maxPos) maxPos=array[i];
+    }
+    Console.WriteLine ("Max =  " + maxPos);
+}
+
+// Метод, находящий минимальное вещественное число в массиве
+
+void minPosNumDouble(double[] array)
+{
+    double minPos = array[0];
+    
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i]<minPos) minPos=array[i];
+    }
+    Console.WriteLine ("Min =  " + minPos);
+}
+
+
+// Метод, находящий максимальное число в массиве
+
+void maxPosNumDouble(double[] array)
+{
+    double maxPos = array[0];
+    
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i]>maxPos) maxPos=array[i];
+    }
+    Console.WriteLine ("Max =  " + maxPos);
+}
+
+// Метод, находящий разницу между мах с мин вещественными числами в массиве
+
+void MaxMinDifferenceDouble(double[] array)
+{
+    double minPos = array[0];
+    
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i]<minPos) minPos=array[i];
+    }
+    Console.WriteLine ("Min =  " + minPos);
+    
+    double maxPos = array[0];
+    
+    for (int i = 1; i < array.Length; i++)
+    {
+        if(array[i]>maxPos) maxPos=array[i];
+    }
+    Console.WriteLine ("Max =  " + maxPos);
+
+    double result = maxPos - minPos;
+    Console.WriteLine("Difference = " + result);
 }
 
 //ДЗ Задача 34: Задайте массив заполненный случайными положительными
@@ -167,27 +283,16 @@ Console.WriteLine("Sum of elements in odd positions " + sumOdd);
 //Задача 38: Задайте массив вещественных чисел. 
 //Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
-/*
-double[] Array = {12,5};
-double numberMax = 12;
-double numberMin = 5;
-Console.WriteLine(numberMax - numberMin);
-*/
 
-// Найти максимальное число в произвольном массиве.
-
-/*Console.Write("Intut size of array: ");
+Console.Write("Intut size of array: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Intut min possidle vaiue of elements: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Intut max possidle vaiue of elements: ");
-int max = Convert.ToInt32(Console.ReadLine());
+double[] array2 = CreateArrayDouble(size);
 
-int[] arr = CreateRandomArray(size, min, max);
-ShowArray(arr);
-int MaxNum = FindMax(arr);
-Console.WriteLine("Максимальное число массива =  " + MaxNum);
-*/
+ShowArrayDouble(array2);
+//minPosNumDouble(array2);
+//maxPosNumDouble(array2);
+MaxMinDifferenceDouble(array2);
+
 
 
 // вызываем массив из случайных элементов
@@ -253,4 +358,29 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] array = CreateRandomArray(size, min, max);
 ShowArray(array);
 Console.WriteLine("Count of two-digit elements is " + FindTwoDigits(array));
+*/
+
+// Метод, находящий максимальное число в массиве
+
+/*int FindMax(int[] array) 
+{   
+    int size = array.Length;
+    int i = 0;
+    int nummax = array [0];
+        while(i<size)
+        if(array[i] > nummax)
+            nummax = array[i];
+        i++;
+    return nummax;
+}
+*/
+// Найти минимальное и максимальное число в произвольном массиве.
+
+/*Console.Write("Intut size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array2 = CreateArray(size);
+
+ShowArray(array2);
+minPosNum(array2);
+maxPosNum(array2);
 */
