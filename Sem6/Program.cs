@@ -250,6 +250,27 @@ void MaxMinDifferenceDouble(double[] array)
 }
 
 
+//Массив создается из чисел Фибоначчи//Первые два числа Фибоначчи: 0 и 1.
+
+int[] Fibonacci(int n)
+{
+    if (n > 1)
+    {
+        int[] newArray = new int[n];
+        Console.WriteLine("Creating array here: ");
+        newArray[0] = 0;
+        newArray[1] = 1;
+        for (int i = 2; i < n; i++)
+        {
+            newArray[i] = newArray[i - 1] + newArray[i - 2];
+        }
+        return newArray;
+    }
+    else return new int[0];
+
+}
+
+
 //Метод, разворачивающий массив.
 
 
@@ -302,15 +323,15 @@ string ChangeDigitSystem(int num)
 {
     string resultNumber = string.Empty;
 
-    while(num>0)
+    while (num > 0)
     {
         resultNumber = num % 2 + resultNumber;
-        num /=2; // то же самое, что и нум = нум/2
+        num /= 2; // то же самое, что и нум = нум/2
     }
     return resultNumber;
 }
 
-Console.WriteLine(ChangeDigitSystem(18));
+//Console.WriteLine(ChangeDigitSystem(18));
 
 /*
 15/2-> 7 1
@@ -341,9 +362,58 @@ for (int i = 0; i < myArray.Length; i++)
 //и проверяет, может ли существовать треугольник с сторонами такой длины.
 //a < b + c и т.д. каждая сторона не должна быть больше суммы других сторон
 
+/*
+void Tr(int a, int b, int c)
+{
+    if (a < b + c && b < a + c && c < a + b)
+        Console.WriteLine("да");
+    else
+        Console.WriteLine("нет");
+}
+
+Console.Write("Введите а: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите б: ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите с: ");
+int c = Convert.ToInt32(Console.ReadLine());
+Tr(a, b, c);
+*/
+bool Triangle(int a, int b, int c)
+{
+    if (a < b + c && b < a + c && c < a + b) return true;
+    else return false;
+}
+
+Console.WriteLine(Triangle(1,2,2));
+
+
 
 
 
 //Не используя рекурсию, выведите первые N чисел Фибоначчи. 
 //Первые два числа Фибоначчи: 0 и 1.
 //0 1 1 2 3 5 8- чтобы получить новое число нужно сложить два предыдущих.
+/*
+int[] Fibonacci(int n) 
+{
+    if (n > 1)
+    {
+        int[] newArray = new int[n];
+        Console.WriteLine("Creating array here: ");
+        newArray[0] = 0;
+        newArray[1] = 1;
+        for (int i = 2; i < n; i++)
+        {
+            newArray[i] = newArray[i - 1] + newArray[i - 2];
+        }
+        return newArray;
+    }
+    else return new int[0]; 
+    
+}
+Console.Write("Введите число ");
+int num = Convert.ToInt32(Console.ReadLine());
+ShowArray(Fibonacci(num));
+*/
+
