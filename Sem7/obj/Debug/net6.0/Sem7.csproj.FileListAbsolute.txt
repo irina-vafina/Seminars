@@ -1,0 +1,15 @@
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.csproj.AssemblyReference.cache
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.AssemblyInfoInputs.cache
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.AssemblyInfo.cs
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.csproj.CoreCompileInputs.cache
+C:\Users\boss_\Desktop\Seminars\Sem7\bin\Debug\net6.0\Sem7.exe
+C:\Users\boss_\Desktop\Seminars\Sem7\bin\Debug\net6.0\Sem7.deps.json
+C:\Users\boss_\Desktop\Seminars\Sem7\bin\Debug\net6.0\Sem7.runtimeconfig.json
+C:\Users\boss_\Desktop\Seminars\Sem7\bin\Debug\net6.0\Sem7.dll
+C:\Users\boss_\Desktop\Seminars\Sem7\bin\Debug\net6.0\Sem7.pdb
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.dll
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\refint\Sem7.dll
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.pdb
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\Sem7.genruntimeconfig.cache
+C:\Users\boss_\Desktop\Seminars\Sem7\obj\Debug\net6.0\ref\Sem7.dll
